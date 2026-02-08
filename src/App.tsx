@@ -39,8 +39,8 @@ export default function Page() {
       {yesPressed ? (
         <>
           <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW1naGdsb2tucTRrenFxZDZiZWZ1cWtpenY3YmozdjNxcTQyN3ptNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11sBLVxNs7v6WA/giphy.gif" />
-          <div className="my-4 text-4xl font-bold">YYAAAAY!!!</div>
-          <div className="my-4 text-l font-bold">(i actually cant see what you clicked so please lmk lol)</div>
+          <div className="my-4 text-4xl font-bold text-center">YYAAAAY!!!</div>
+          <div className="my-4 text-l font-bold text-center">(i actually cant see what you clicked so please lmk lol)</div>
         </>
       ) : (
         <>
@@ -48,7 +48,7 @@ export default function Page() {
             className="h-[200px]"
             src={currentGIF}
           />
-          <h1 className="my-4 text-4xl">Sarah, will you be my valentine?</h1>
+          <h1 className="my-4 text-4xl text-center">Sarah, will you be my valentine?</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
