@@ -3,31 +3,32 @@ import { useState } from "react";
 
 export default function Page() {
   const [noCount, setNoCount] = useState(0);
+  const [currentGIF, setCurrentGif] = useState("https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif");
   const [yesPressed, setYesPressed] = useState(false);
   const yesButtonSize = noCount * 20 + 16;
+  const noGIF = "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTYzbDc4NXZlYW1nanYwcTlha2lydnlkNTRyaG1qcjY5MnUyY2pudSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/P53TSsopKicrm/giphy.gif";
 
   const handleNoClick = () => {
     setNoCount(noCount + 1);
+    setCurrentGif(noGIF);
   };
 
   const getNoButtonText = () => {
     const phrases = [
       "No",
       "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
-      "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
-      ":((((",
-      "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
+      "Are you REALLY sure",
+      "ok :((",
+      "NO, PLEASE",
+      "I'll die",
+      "Like fr",
+      "i'm dead, goodbye",
+      "mango pie?",
+      "matcha, boba, banh mi, chicken adobo?",
+      "i actually never had filipino food lol",
+      "wait, STOP",
+      "still no?",
+      "nooooo :(("
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -37,16 +38,17 @@ export default function Page() {
     <div className="-mt-16 flex h-screen flex-col items-center justify-center">
       {yesPressed ? (
         <>
-          <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+          <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW1naGdsb2tucTRrenFxZDZiZWZ1cWtpenY3YmozdjNxcTQyN3ptNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11sBLVxNs7v6WA/giphy.gif" />
+          <div className="my-4 text-4xl font-bold">YYAAAAY!!!</div>
+          <div className="my-4 text-l font-bold">(i actually cant see what you clicked so please lmk lol)</div>
         </>
       ) : (
         <>
           <img
             className="h-[200px]"
-            src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
+            src={currentGIF}
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl">Sarah, will you be my valentine?</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
